@@ -18,27 +18,36 @@ export default function Home({schedule}) {
           XXX
         </h1>
 
-        <div>
-            <h2>
-            {schedule.result.regular[0].rule.name}
-            </h2>
-        
-        <Moment format="YYYY/MM/DD H:mm">
-            {schedule.result.regular[0].start_time}
-        </Moment>
-        〜
-        <Moment format="YYYY/MM/DD H:mm">
-            {schedule.result.regular[0].end_time}
-        </Moment>
-        <ul>
-            <li>
-                {schedule.result.regular[0].stages[0].name}
-            </li>
-            <li>
-                {schedule.result.regular[0].stages[1].name}
-            </li>
-        </ul>
-       
+        <div className="entry">
+            <h2>Current Session</h2>
+            <Moment format="YYYY/MM/DD H:mm">
+                {schedule.result.regular[0].start_time}
+            </Moment>
+            〜
+            <Moment format="YYYY/MM/DD H:mm">
+                {schedule.result.regular[0].end_time}
+            </Moment>
+            <h3>
+            ナワバリバトル
+            </h3>
+            <ul>
+                <li>{schedule.result.regular[0].stages[0].name}</li>
+                <li>{schedule.result.regular[0].stages[1].name}</li>
+            </ul>
+            <h3>
+            バンカラマッチ(チャレンジ)({schedule.result.bankara_challenge[0].rule.name})
+            </h3>
+            <ul>
+                <li>{schedule.result.bankara_challenge[0].stages[0].name}</li>
+                <li>{schedule.result.bankara_challenge[0].stages[1].name}</li>
+            </ul>
+            <h3>
+            バンカラマッチ(オープン)({schedule.result.bankara_open[0].rule.name})
+            </h3>
+            <ul>
+                <li>{schedule.result.bankara_open[0].stages[0].name}</li>
+                <li>{schedule.result.bankara_open[0].stages[1].name}</li>
+            </ul>
         </div>
 
 
