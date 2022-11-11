@@ -2,3 +2,26 @@
 .container {
     padding: 0 2rem;
   }
+
+.entry {
+    text-align: center;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 10px;
+    padding: 20px;
+}
+.rules h3 {
+    margin: 0;
+}
+.stageList{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.stageList p{
+    margin: 4px;
+}
+.rules > div {
+    padding-bottom: 50px;
+}
