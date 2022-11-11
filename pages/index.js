@@ -15,39 +15,97 @@ export default function Home({schedule}) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          XXX
+          Splatoon3 Stage Schedule
         </h1>
 
-        <div className="entry">
-            <h2>Current Session</h2>
-            <Moment format="YYYY/MM/DD H:mm">
-                {schedule.result.regular[0].start_time}
-            </Moment>
-            〜
-            <Moment format="YYYY/MM/DD H:mm">
-                {schedule.result.regular[0].end_time}
-            </Moment>
-            <h3>
-            ナワバリバトル
+        <div className={styles.entry}>
+            <h2>Current Stages</h2>
+            <h3 className='stage-schedule'>
+              <Moment format="YY/MM/DD H:mm">
+                  {schedule.result.regular[0].start_time}
+              </Moment>
+              {' '}〜{' '}
+              <Moment format="YY/MM/DD H:mm">
+                  {schedule.result.regular[0].end_time}
+              </Moment>
             </h3>
-            <ul>
-                <li>{schedule.result.regular[0].stages[0].name}</li>
-                <li>{schedule.result.regular[0].stages[1].name}</li>
-            </ul>
-            <h3>
-            バンカラマッチ(チャレンジ)({schedule.result.bankara_challenge[0].rule.name})
-            </h3>
-            <ul>
-                <li>{schedule.result.bankara_challenge[0].stages[0].name}</li>
-                <li>{schedule.result.bankara_challenge[0].stages[1].name}</li>
-            </ul>
-            <h3>
-            バンカラマッチ(オープン)({schedule.result.bankara_open[0].rule.name})
-            </h3>
-            <ul>
-                <li>{schedule.result.bankara_open[0].stages[0].name}</li>
-                <li>{schedule.result.bankara_open[0].stages[1].name}</li>
-            </ul>
+            <div className={styles.rules}>
+              <div>
+                <h3>
+                ナワバリバトル
+                </h3>
+                <ul className={styles.stageList}>
+                    <li>
+                      <p>{schedule.result.regular[0].stages[0].name}</p>
+                      <Image
+                        src={schedule.result.regular[0].stages[0].image}
+                        width={128}
+                        height={64}
+                        alt="stage-pic"
+                      />
+                    </li>
+                    <li>
+                      <p>{schedule.result.regular[0].stages[1].name}</p>
+                      <Image
+                          src={schedule.result.regular[0].stages[1].image}
+                          width={128}
+                          height={64}
+                          alt="stage-pic"
+                        />
+                    </li>
+                </ul>
+              </div>
+              <div>
+                <h3>
+                バンカラマッチ(チャレンジ)<br />({schedule.result.bankara_challenge[0].rule.name})
+                </h3>
+                <ul className={styles.stageList}>
+                    <li>
+                      <p>{schedule.result.bankara_challenge[0].stages[0].name}</p>
+                      <Image
+                          src={schedule.result.bankara_challenge[0].stages[0].image}
+                          width={128}
+                          height={64}
+                          alt="stage-pic"
+                        />
+                    </li>
+                    <li>
+                      <p>{schedule.result.bankara_challenge[0].stages[1].name}</p>
+                      <Image
+                          src={schedule.result.bankara_challenge[0].stages[1].image}
+                          width={128}
+                          height={64}
+                          alt="stage-pic"
+                        />
+                    </li>
+                </ul>
+              </div>
+              <div>
+                <h3>
+                バンカラマッチ(オープン)<br />({schedule.result.bankara_open[0].rule.name})
+                </h3>
+                <ul className={styles.stageList}>
+                    <li>
+                      <p>{schedule.result.bankara_open[0].stages[0].name}</p>
+                      <Image
+                          src={schedule.result.bankara_open[0].stages[0].image}
+                          width={128}
+                          height={64}
+                          alt="stage-pic"
+                        />
+                    </li>
+                    <li>
+                      <p>{schedule.result.bankara_open[0].stages[1].name}</p>
+                      <Image
+                          src={schedule.result.bankara_open[0].stages[1].image}
+                          width={128}
+                          height={64}
+                          alt="stage-pic"
+                        />
+                    </li>
+                </ul>
+              </div>
+            </div>
         </div>
 
 

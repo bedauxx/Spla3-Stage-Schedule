@@ -131,3 +131,25 @@
     filter: invert(1);
   }
 }
+
+.entry {
+  text-align: center;
+}
+
+.rules h3{
+  margin-bottom: 0;
+}
+
+.stageList{
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.stageList p{
+  margin: 0;
+  padding: 0;
+}
