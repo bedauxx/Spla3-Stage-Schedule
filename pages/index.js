@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Moment from 'react-moment'
 import styles from '../styles/Home.module.css'
+import { GetStaticProps } from 'next'
 
-export default function Home() {
+export default function Home({schedule}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -16,42 +18,35 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
+        <div>
+            <h2>
+            {schedule.result.regular[0].rule.name}
+            </h2>
+        
+        <Moment format="YYYY/MM/DD H:mm">
+            {schedule.result.regular[0].start_time}
+        </Moment>
+        〜
+        <Moment format="YYYY/MM/DD H:mm">
+            {schedule.result.regular[0].end_time}
+        </Moment>
+        <ul>
+            <li>
+                {schedule.result.regular[0].stages[0].name}
+            </li>
+            <li>
+                {schedule.result.regular[0].stages[1].name}
+            </li>
+        </ul>
+       
+        </div>
+
+
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
       </main>
 
       <footer className={styles.footer}>
@@ -68,4 +63,16 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+
+export const getStaticProps = async() => {
+// export async function getStaticProps() でも同じ
+  const res = await fetch(`https://spla3.yuu26.com/api/schedule`)
+  const schedule = await res.json()
+  //console.log("-----------------------------------------------------------------------------")
+  //console.log(schedule.result.regular[0])
+
+  return {
+    props: { schedule }, // will be passed to the page component as props
+  }
 }
