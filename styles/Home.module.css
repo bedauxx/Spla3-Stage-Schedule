@@ -19,13 +19,8 @@
   padding: 2rem 0;
   justify-content: center;
   align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  font-size: 12px;
+  color: white;
 }
 
 .title a {

@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: curl
-        run: curl ${{ secrets.VERCEL_DEPLOYHOOK_URL }} -X POST
+        run:  curl --show-error -X POST -d {} ${{ secrets.VERCEL_DEPLOYHOOK_URL }}

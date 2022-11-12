@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Moment from 'react-moment'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import DefaultStages from '../component/DefaultStages.js'
 import FestStages from '../component/FestStages.js'
@@ -32,6 +33,7 @@ export default function Home({schedule}) {
       </main>
 
       <footer className={styles.footer}>
+        <p>This APP using <Link href="https://spla3.yuu26.com/">Spla3 API</Link></p>
       </footer>
     </div>
   )
