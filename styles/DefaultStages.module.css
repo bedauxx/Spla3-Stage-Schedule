@@ -9,7 +9,7 @@
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    width: 340px;
+    width: 350px;
 }
 .rules h3 {
     margin: 0;
@@ -23,6 +23,8 @@
 }
 .stageList p{
     margin: 4px;
+    font-size: 14px;
+    font-weight: bold;
 }
 .rules > div {
     padding-bottom: 50px;
@@ -34,7 +36,7 @@
     border-radius: 10px;
     padding: 20px 0;
     margin-bottom: 20px;
-    width: 340px;
+    width: 350px;
 }
 
 
