@@ -8,6 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: always()
-    run: |
-      curl ${{ secrets.VERCEL_DEPLOYHOOK_URL }} -X POST
+    steps:
+    - name: one-step 
+      run: curl ${{ secrets.VERCEL_DEPLOYHOOK_URL }} -X POST
