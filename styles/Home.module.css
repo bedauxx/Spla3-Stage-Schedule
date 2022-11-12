@@ -150,3 +150,13 @@
   color:yellow;
   margin-bottom : 20px;
 }
+@media(max-width 768px){
+    .qr {
+        display:none !important;
+    }
+}
+@media(max-width 768px){
+  .pc {
+      display:none !important;
+  }
+}

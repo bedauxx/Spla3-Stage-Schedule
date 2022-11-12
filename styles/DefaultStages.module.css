@@ -27,3 +27,19 @@
 .rules > div {
     padding-bottom: 50px;
 }
+
+.qr {
+    text-align: center;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 10px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    width: 340px;
+}
+
+
+@media screen and (max-width:768px){
+    .qr {
+        display:none !important;
+    }
+}
