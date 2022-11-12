@@ -5,7 +5,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import DefaultStages from '../component/DefaultStages.js'
 import FestStages from '../component/FestStages.js'
-import QR from '../component/QR.js'
+import QR from '../component/qr.js'
 import { GetStaticProps } from 'next'
 
 export default function Home({schedule}) {
