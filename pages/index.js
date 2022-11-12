@@ -42,8 +42,8 @@ export default function Home({schedule}) {
       </main>
 
       <footer className={styles.footer}>
-        <p>Developed by <Link href="https://twitter.com/missplatoon">@missplatoon</Link></p>
-        <p>This APP using <Link href="https://spla3.yuu26.com/">Spla3 API</Link></p>
+        <p>Developed by <Link href="https://twitter.com/missplatoon">@missplatoon</Link>{" "}
+        This APP using <Link href="https://spla3.yuu26.com/">Spla3 API</Link></p>
       </footer>
     </div>
   )
