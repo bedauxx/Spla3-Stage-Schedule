@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
         if: always()
         run: |
-          curl ${{ secrets.VERCEL_DEPLOYHOOK_URL }} -X POST -H 'Content-Type: application/json' -d @-
+          curl ${{ secrets.VERCEL_DEPLOYHOOK_URL }} -X POST
