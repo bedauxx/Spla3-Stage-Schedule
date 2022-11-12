@@ -1,14 +1,12 @@
-# ワークフロー名
 name: vercel-deploy-hook
 on:
   schedule:
-    # 定期実行する時間・・・①
     - cron: '0,30,45,15 * * * *'
-
 jobs:
-  build:
-    name: build
+  cron:
     runs-on: ubuntu-latest
     steps:
-      - name: curl
-        run:  curl --show-error -X POST -d {} "${{ secrets.VERCEL_DEPLOYHOOK_URL }}"
+      - name: Call 
+        run: |
+          curl --request POST \
+          --url ${{ secrets.VERCEL_DEPLOYHOOK_URL }}
