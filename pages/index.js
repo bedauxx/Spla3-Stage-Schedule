@@ -14,7 +14,7 @@ export default function Home({schedule}) {
     <div className={styles.container}>
       <Head prefix='og:http://ogp.me/ns#'>
         <title>Spla3 Stage Schedule</title>
-        <meta name="description" content="Spla3 Stage Schedule" />
+        <meta name="description" content="スプラ3のステージスケジュール" />
         <meta property="og:url" content="https://spla3-stage-schedule.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Spla3 Stage Schedule" />
