@@ -21,6 +21,8 @@ export default function Home({schedule}) {
         <meta property="og:description" content="スプラ3のステージスケジュール" />
         <meta property="og:site_name" content="Spla3 Stage Schedule" />
         <meta property="og:image" content="https://spla3-stage-schedule.vercel.app/img/ogp.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@missplatoon" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
