@@ -3,7 +3,7 @@ name: vercel-deploy-hook
 on:
   schedule:
     # 定期実行する時間・・・①
-    - cron: '0,30 * * * *'
+    - cron: '0,8,30 * * * *'
 
 jobs:
   build:
