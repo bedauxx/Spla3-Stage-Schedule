@@ -12,9 +12,15 @@ import { GetStaticProps } from 'next'
 export default function Home({schedule}) {
   return (
     <div className={styles.container}>
-      <Head>
+      <Head prefix='og:http://ogp.me/ns#'>
         <title>Spla3 Stage Schedule</title>
         <meta name="description" content="Spla3 Stage Schedule" />
+        <meta property="og:url" content="https://spla3-stage-schedule.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Spla3 Stage Schedule" />
+        <meta property="og:description" content="スプラ3のステージスケジュール" />
+        <meta property="og:site_name" content="Spla3 Stage Schedule" />
+        <meta property="og:image" content="https://spla3-stage-schedule.vercel.app/img/ogp.png" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
