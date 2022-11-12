@@ -11,13 +11,13 @@ export default function Home({schedule}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Splatoon3 Stage Schedule</title>
-        <meta name="description" content="Splatoon3 Stage Schedule" />
+        <title>Spla3 Stage Schedule</title>
+        <meta name="description" content="Spla3 Stage Schedule" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>
-        Splatoon3 Stage Schedule
+        Spla3 Stage Schedule
         </h1>
         {(() => {
           if (schedule.result.regular[0].is_fest != true) {
