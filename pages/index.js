@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Moment from 'react-moment'
 import Link from 'next/link'
+import { VFXSpan } from 'react-vfx'
 import styles from '../styles/Home.module.css'
 import DefaultStages from '../component/DefaultStages.js'
 import FestStages from '../component/FestStages.js'
@@ -18,7 +19,7 @@ export default function Home({schedule}) {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>
-        Spla3 Stage Schedule
+          <VFXSpan shader="glitch">Spla3 Stage Schedule</VFXSpan>
         </h1>
         {(() => {
           if (schedule.result.regular[0].is_fest != true) {

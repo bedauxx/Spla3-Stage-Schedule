@@ -11,6 +11,7 @@ export default function QR() {
                 height={200}
                 alt="QR CODE"
             />
+            <p>https://spla3-stage-schedule.vercel.app/</p>
         </div>
     </>
   )
