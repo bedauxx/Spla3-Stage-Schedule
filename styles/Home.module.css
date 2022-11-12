@@ -151,12 +151,12 @@
   margin-bottom : 20px;
 }
 @media(max-width 768px){
-    .Qr {
+    .qr {
         display:none !important;
     }
 }
 @media(max-width 768px){
-  .Pc {
+  .pc {
       display:none !important;
   }
 }
