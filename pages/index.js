@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Moment from 'react-moment'
 import styles from '../styles/Home.module.css'
 import DefaultStages from '../component/DefaultStages.js'
+import FestStages from '../component/FestStages.js'
 import { GetStaticProps } from 'next'
 
 export default function Home({schedule}) {
@@ -17,7 +18,16 @@ export default function Home({schedule}) {
         <h1 className={styles.title}>
           Splatoon3 Stage Schedule
         </h1>
-        <DefaultStages schedule={schedule}></DefaultStages>
+
+        {(() => {
+          if (schedule.result.regular[0].is_fest != true) {
+            return <DefaultStages schedule={schedule}></DefaultStages>
+          } else {
+            return <FestStages schedule={schedule}></FestStages>
+          }
+        })()}
+
+        
         
 
       </main>
