@@ -4,8 +4,8 @@ import Moment from 'react-moment'
 import Link from 'next/link'
 import { VFXSpan } from 'react-vfx'
 import styles from '../styles/Home.module.css'
-import DefaultStages from '../component/DefaultStages.js'
-import FestStages from '../component/FestStages.js'
+import CurrentStages from '../component/CurrentStages.js'
+import NextStages from '../component/NextStages.js'
 import QR from '../component/qr.js'
 import { GetStaticProps } from 'next'
 
@@ -29,14 +29,8 @@ export default function Home({schedule}) {
         <h1 className={styles.title}>
           <VFXSpan shader="glitch">Spla3 Stage Schedule</VFXSpan>
         </h1>
-        {(() => {
-          if (schedule.result.regular[0].is_fest != true) {
-            return <DefaultStages schedule={schedule}></DefaultStages>
-          } else {
-            return <FestStages schedule={schedule}></FestStages>
-          }
-        })()}
-
+            <CurrentStages schedule={schedule}></CurrentStages>
+            <NextStages schedule={schedule}></NextStages>
         <QR></QR>
         
       </main>
