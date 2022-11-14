@@ -26,6 +26,14 @@
     font-size: 14px;
     font-weight: bold;
 }
+.weaponList{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-flow:row wrap;
+}
 .rules > div {
     padding-bottom: 50px;
 }

@@ -6,10 +6,11 @@ import { VFXSpan } from 'react-vfx'
 import styles from '../styles/Home.module.css'
 import CurrentStages from '../component/CurrentStages.js'
 import NextStages from '../component/NextStages.js'
+import CoopStages from '../component/CoopStages.js'
 import QR from '../component/qr.js'
 import { GetStaticProps } from 'next'
 
-export default function Home({schedule}) {
+export default function Home({schedule,salmonSchedule}) {
   return (
     <div className={styles.container}>
       <Head prefix='og:http://ogp.me/ns#'>
@@ -31,6 +32,8 @@ export default function Home({schedule}) {
         </h1>
             <CurrentStages schedule={schedule}></CurrentStages>
             <NextStages schedule={schedule}></NextStages>
+            <CoopStages salmonSchedule={salmonSchedule}></CoopStages>
+                
         <QR></QR>
         
       </main>
@@ -44,7 +47,6 @@ export default function Home({schedule}) {
 }
 
 export const getStaticProps = async() => {
-// export async function getStaticProps() でも同じ
   const req = new Request("https://spla3.yuu26.com/api/schedule", {
     headers: {
       "user-agent": "S3/1.0(twitter@missplatoon)",
@@ -52,10 +54,16 @@ export const getStaticProps = async() => {
   });
   const res = await fetch(req)
   const schedule = await res.json()
-  //console.log("-----------------------------------------------------------------------------")
-  //console.log(schedule.result.regular[0])
+
+  const salmon_req = new Request("https://spla3.yuu26.com/api/coop-grouping-regular/schedule", {
+    headers: {
+      "user-agent": "S3/1.0(twitter@missplatoon)",
+    },
+  });
+  const salmon_res = await fetch(salmon_req)
+  const salmonSchedule = await salmon_res.json()
 
   return {
-    props: { schedule }, // will be passed to the page component as props
+    props: { schedule,salmonSchedule }, // will be passed to the page component as props
   }
 }
