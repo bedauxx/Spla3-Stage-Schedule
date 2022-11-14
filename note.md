@@ -2,6 +2,3 @@
   
 ## 概要 
 vercel + nextjs13 + spla3APIでつくる  
-
-## メモ  
-めも
