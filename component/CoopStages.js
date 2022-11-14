@@ -7,7 +7,7 @@ export default function CoopStages({ salmonSchedule }) {
     <>
     <div className={styles.entry}>
         <h2>サーモンラン</h2>
-        <h2>Current Stages</h2>
+        <h2>Current Stage</h2>
         <h3 className='stage-schedule'>
             <Moment format="YY/MM/DD H:mm">
                 {salmonSchedule.results[0].start_time}
@@ -73,7 +73,7 @@ export default function CoopStages({ salmonSchedule }) {
 
     <div className={styles.entry}>
             <h2>サーモンラン</h2>
-            <h2>Next Stages</h2>
+            <h2>Next Stage</h2>
             <h3 className='stage-schedule'>
                 <Moment format="YY/MM/DD H:mm">
                     {salmonSchedule.results[0].start_time}
