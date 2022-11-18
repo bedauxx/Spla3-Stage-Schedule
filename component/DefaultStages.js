@@ -8,11 +8,11 @@ export default function DefaultStages({ schedule }) {
         <div className={styles.entry}>
             <h2>Current Stages</h2>
             <h3 className='stage-schedule'>
-              <Moment format="YY/MM/DD H:mm">
+              <Moment format="MM/DD H:mm">
                   {schedule.result.regular[0].start_time}
               </Moment>
               {' '}〜{' '}
-              <Moment format="YY/MM/DD H:mm">
+              <Moment format="MM/DD H:mm">
                   {schedule.result.regular[0].end_time}
               </Moment>
             </h3>
@@ -98,11 +98,11 @@ export default function DefaultStages({ schedule }) {
         <div className={styles.entry}>
             <h2>Next Stages</h2>
             <h3 className='stage-schedule'>
-              <Moment format="YY/MM/DD H:mm">
+              <Moment format="MM/DD H:mm">
                   {schedule.result.regular[1].start_time}
               </Moment>
               {' '}〜{' '}
-              <Moment format="YY/MM/DD H:mm">
+              <Moment format="MM/DD H:mm">
                   {schedule.result.regular[1].end_time}
               </Moment>
             </h3>
