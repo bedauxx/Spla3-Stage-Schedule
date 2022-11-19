@@ -48,7 +48,7 @@ export default function CurrentStages({ schedule }) {
                   </div>
                   <div>
                     <h3>
-                    バンカラマッチ(チャレンジ)<br />({schedule.result.bankara_challenge[0].rule.name})
+                    バンカラマッチ(チャレンジ)<br />({schedule.result.bankara_challenge[1].rule.name})
                     </h3>
                     <ul className={styles.stageList}>
                         <li>
@@ -73,7 +73,7 @@ export default function CurrentStages({ schedule }) {
                   </div>
                   <div>
                     <h3>
-                    バンカラマッチ(オープン)<br />({schedule.result.bankara_open[0].rule.name})
+                    バンカラマッチ(オープン)<br />({schedule.result.bankara_open[1].rule.name})
                     </h3>
                     <ul className={styles.stageList}>
                         <li>
