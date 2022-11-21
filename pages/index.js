@@ -41,8 +41,10 @@ export default function Home({schedule,salmonSchedule}) {
       </Tab.List>
       <Tab.Panels>
         <Tab.Panel>
+          <div className='flex'>
             <CurrentStages schedule={schedule}></CurrentStages>
             <NextStages schedule={schedule}></NextStages>
+          </div>
         </Tab.Panel>
         <Tab.Panel>
             <CoopStages salmonSchedule={salmonSchedule}></CoopStages>
