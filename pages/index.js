@@ -25,6 +25,8 @@ export default function Home({schedule,salmonSchedule}) {
         <meta property="og:image" content="https://spla3-stage-schedule.vercel.app/img/ogp.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@missplatoon" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
