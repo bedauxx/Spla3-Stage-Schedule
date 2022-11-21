@@ -7,6 +7,7 @@ import styles from '../styles/Home.module.css'
 import CurrentStages from '../component/CurrentStages.js'
 import NextStages from '../component/NextStages.js'
 import CoopStages from '../component/CoopStages.js'
+import { Tab } from '@headlessui/react'
 import QR from '../component/qr.js'
 import { GetStaticProps } from 'next'
 
@@ -30,12 +31,27 @@ export default function Home({schedule,salmonSchedule}) {
         <h1 className={styles.title}>
           <VFXSpan shader="glitch">Spla3 Stage Schedule</VFXSpan>
         </h1>
+
+    <Tab.Group>
+      <Tab.List className={styles.tabs}>
+        <Tab className={styles.tab}>バトル</Tab>
+        <Tab className={styles.tab}>サーモンラン</Tab>
+      </Tab.List>
+      <Tab.Panels>
+        <Tab.Panel>
             <CurrentStages schedule={schedule}></CurrentStages>
             <NextStages schedule={schedule}></NextStages>
+        </Tab.Panel>
+        <Tab.Panel>
             <CoopStages salmonSchedule={salmonSchedule}></CoopStages>
+        </Tab.Panel>
+      </Tab.Panels>
+    </Tab.Group>
+
                 
-        <QR></QR>
-        
+    <QR></QR>
+
+
       </main>
 
       <footer className={styles.footer}>

@@ -17,6 +17,9 @@ body {
   }
 }
 
+button:focus {
+    outline: none;
+}
 @font-face {
   font-family: 'paintball';
   src: url('/paintball_web.woff');
