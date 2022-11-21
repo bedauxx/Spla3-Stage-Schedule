@@ -8,12 +8,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-
-const withPWA = require("next-pwa")({dest: 'public'});
-
-module.exports = withPWA({
-    reactStrinctMode: true,
-    images: {
-      domains: ['api.lp1.av5ja.srv.nintendo.net'],
-    },
-  });
