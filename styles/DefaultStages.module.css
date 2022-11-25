@@ -70,3 +70,6 @@
     color:black;
     background-color:yellow;
 }
+.tab img{
+    vertical-align: bottom;
+}
