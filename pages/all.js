@@ -4,9 +4,7 @@ import Moment from 'react-moment'
 import Link from 'next/link'
 import { VFXSpan } from 'react-vfx'
 import styles from '../styles/Home.module.css'
-import CurrentStages from '../component/CurrentStages.js'
-import NextStages from '../component/NextStages.js'
-import CoopStages from '../component/CoopStages.js'
+import AllStages from '../component/AllStages.js'
 import { Tab } from '@headlessui/react'
 import QR from '../component/qr.js'
 import { GetStaticProps } from 'next'
@@ -34,29 +32,10 @@ export default function Home({schedule,salmonSchedule}) {
           <VFXSpan shader="glitch">Spla3 Stage Schedule</VFXSpan>
         </h1>
 
-    <Tab.Group>
-      <Tab.List className={styles.tabs}>
-        <Tab className={styles.tab}>バトル</Tab>
-        <Tab className={styles.tab}>サーモンラン</Tab>
-      </Tab.List>
-      <Tab.Panels>
-        <Tab.Panel>
-          <div className='flex'>
-            <CurrentStages schedule={schedule}></CurrentStages>
-            <NextStages schedule={schedule}></NextStages>
-          </div>
-        </Tab.Panel>
-        <Tab.Panel>
-            <CoopStages salmonSchedule={salmonSchedule}></CoopStages>
-        </Tab.Panel>
-      </Tab.Panels>
-    </Tab.Group>
 
-    <Link href="/all" className={styles.link}>All Upcoming Stages</Link>
+        <AllStages schedule={schedule}></AllStages>
 
-                
-    <QR></QR>
-
+        <Link href="/" className={styles.link}>home</Link>
 
       </main>
 

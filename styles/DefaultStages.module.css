@@ -53,3 +53,20 @@
         display:none !important;
     }
 }
+
+.tabs{
+    padding:10px;
+}
+.tab {
+    border:none;
+    background:none;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:bold;
+    color:#FFF;
+    padding:5px 10px;
+}
+.tab[data-headlessui-state~="selected"] {
+    color:black;
+    background-color:yellow;
+}
