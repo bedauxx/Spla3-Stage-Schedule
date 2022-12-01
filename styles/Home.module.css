@@ -176,3 +176,15 @@
     color:black;
     background-color:yellow;
 }
+.link{
+    color: yellow;
+    background: rgba(0,0,0,.4);
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+.link:hover{
+    font-weight:bold;
+    background: rgba(0,0,0,1);
+}
