@@ -8,10 +8,10 @@ export default function AllStages({ schedule }) {
     <>
     <Tab.Group>
       <Tab.List className={styles.tabs}>
-        <Tab className={styles.tab}><Image src='/img/icons/regular.svg' width={30} height={30} alt="" />ナワバリ</Tab>
-        <Tab className={styles.tab}><Image src='/img/icons/bankara.svg' width={30} height={30} alt="" />チャレンジ</Tab>
-        <Tab className={styles.tab}><Image src='/img/icons/bankara.svg' width={30} height={30} alt="" />オープン</Tab>
-        <Tab className={styles.tab}><Image src='/img/icons/x.svg' width={30} height={30} alt="" />X</Tab>
+        <Tab className={styles.tab}><Image src='/img/icons/regular.svg' width={30} height={30} alt="" /><br />ナワバリ</Tab>
+        <Tab className={styles.tab}><Image src='/img/icons/bankara.svg' width={30} height={30} alt="" /><br />チャレンジ</Tab>
+        <Tab className={styles.tab}><Image src='/img/icons/bankara.svg' width={30} height={30} alt="" /><br />オープン</Tab>
+        <Tab className={styles.tab}><Image src='/img/icons/x.svg' width={30} height={30} alt="" /><br />Xマッチ</Tab>
       </Tab.List>
       <Tab.Panels>
         <Tab.Panel>
