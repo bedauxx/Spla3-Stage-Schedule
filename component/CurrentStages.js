@@ -97,6 +97,31 @@ export default function CurrentStages({ schedule }) {
                         </li>
                     </ul>
                   </div>
+                  <div>
+                    <h3>
+                    Xマッチ<br />({schedule.result.x[0].rule.name})
+                    </h3>
+                    <ul className={styles.stageList}>
+                        <li>
+                          <p>{schedule.result.x[0].stages[0].name}</p>
+                          <Image
+                              src={schedule.result.x[0].stages[0].image}
+                              width={128}
+                              height={64}
+                              alt="stage-pic"
+                            />
+                        </li>
+                        <li>
+                          <p>{schedule.result.x[0].stages[1].name}</p>
+                          <Image
+                              src={schedule.result.x[0].stages[1].image}
+                              width={128}
+                              height={64}
+                              alt="stage-pic"
+                            />
+                        </li>
+                    </ul>
+                  </div>
                 </div>
             </div>
             )
